@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ganesh.s college Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#c4c3c7d4;
+color:rgb(93, 177, 245);
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+background:rgba(15,23,42,.9);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:1.5rem;
+font-weight:700;
+color:#60a5fa;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#60a5fa;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+}
+
+.hero span{
+background:linear-gradient(90deg,#60a5fa,#cbb4e0);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:15px;
+max-width:600px;
+opacity:.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:12px 25px;
+background:linear-gradient(90deg,#60a5fa,#aa6ce4);
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:600;
+}
+
+section{
+padding:100px 8%;
+}
+
+.title{
+font-size:2.5rem;
+margin-bottom:30px;
+text-align:center;
+}
+
+.about{
+max-width:800px;
+margin:auto;
+text-align:center;
+line-height:1.8;
+}
+
+.skills-grid,
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.contact{
+text-align:center;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+max-width:600px;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+background:#1e293b;
+color:white;
+}
+
+.contact button{
+padding:12px 30px;
+border:none;
+border-radius:25px;
+background:linear-gradient(90deg,#60a5fa,#a855f7);
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.5rem;
+}
+
+nav{
+flex-direction:column;
+align-items:center;
+gap:10px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">GANESH.S</div>
+
+<ul>
+<li><a href="about.html">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="certificates.html">Certificates</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Hi I'm <span>GANESH</span></h1>
+<p>
+A passionate student exploring web development,
+AI, technology, and creative problem solving.
+</p>
+
+<a href="#projects" class="btn">View My Work</a>
+</section>
+
+<section id="about">
+<h2 class="title">About Me</h2>
+
+<div class="about">
+<p>
+I am a college student who enjoys building websites,
+learning new technologies, and creating useful digital
+solutions. My goal is to become a skilled developer and
+work on impactful projects that solve real-world problems
+</p>
+</div>
+</section>
+
+<section id="skills">
+<h2 class="title">Skills</h2>
+
+<div class="skills-grid">
+<div class="card">
+<h3>HTML & CSS</h3>
+<p>Building responsive modern interfaces.</p>
+</div>
+
+<div class="card">
+<h3>JavaScript</h3>
+<p>Interactive and dynamic web applications.</p>
+</div>
+
+<div class="card">
+<h3>Python</h3>
+<p>Automation, scripting and problem solving.</p>
+</div>
+
+<div class="card">
+<h3>AI Tools</h3>
+<p>Using modern AI solutions productively.</p>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2 class="title">Projects</h2>
+
+<div class="projects-grid">
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>A personal responsive portfolio project.</p>
+</div>
+
+<div class="card">
+<h3>Student Management App</h3>
+<p>Track students and academic data.</p>
+</div>
+
+<div class="card">
+<h3>AI Chat Assistant</h3>
+<p>Simple chatbot using AI APIs.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2 class="title">Contact</h2>
+
+<div class="contact">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+<br>
+<button onclick="sendMessage()">Send Message</button>
+
+<p id="result"></p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 ganesh.s Portfolio. All Rights Reserved.</p>
+</footer>
+<script>
+function sendMessage() {
+
+let name = document.querySelector('input[type="text"]').value;
+let email = document.querySelector('input[type="email"]').value;
+let message = document.querySelector('textarea').value;
+
+if(name === "" || email === "" || message === "") {
+    document.getElementById("result").innerHTML =
+    "❌ Please fill all fields!";
+}
+else {
+    document.getElementById("result").innerHTML =
+    "✅ Message Sent Successfully!";
+}
+
+}
+</script>
+
+</body>
+</html>
